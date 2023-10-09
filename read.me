@@ -1,0 +1,66 @@
+перевая команда 
+suod npm i
+---------------
+npm run start - запуск
+npm run clean - очистка dist
+npm run build - сборка бандла
+---------------
+
+//main 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoculture</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.min.css">
+
+</head>
+<body>
+
+    {% include "components/header.html" %}
+
+    <aside class="sidebar">
+
+
+    </aside>
+
+    <main class="content">
+
+      <div class="container">
+
+        {% block content %}{% endblock %}
+
+      </div>
+
+    </main>
+
+    {% include "components/footer.html" %}
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+    <script src="./js/jquery.maskedinput.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+// block-content
+
+{% extends "layouts/main.html" %}
+
+{% block content %}
+
+<h1>hello world with index/html</h1>
+
+{% endblock %}
+
+// 
