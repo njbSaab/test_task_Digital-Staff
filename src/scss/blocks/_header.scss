@@ -1,0 +1,79 @@
+.header {
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+
+  .logo_wrapp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: use(light);
+  }
+
+  .logo_wrapp path {
+    fill: use(light);
+  }
+
+  .header_wrapp{
+    margin-top: 30px;
+  }
+  .navbar{
+    width: 50%;
+    margin: auto auto;
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+    padding: 10px;
+  }
+  a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition-duration: var(--bulma-duration);
+    transition-property: background-color, border-color, color;
+  }
+  .button.is-text {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    text-decoration: none;
+    position: relative; 
+    overflow: hidden; 
+  }
+  
+  .button.is-text {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.2s;
+    border-radius: 30px;
+  }
+  
+  .button.is-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #d53d29, transparent);
+    transition: width 0.5s ease;
+  }
+  
+  .button.is-text:hover::after {
+    width: 100%;
+  }
+  
+  .button.is-text:active {
+    background-color: rgba(0, 0, 0, 0.175); 
+  }
+  
+  
+}
