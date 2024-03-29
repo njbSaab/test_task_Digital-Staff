@@ -33,9 +33,32 @@
     height: 100dvh;
     display: flex;
     flex-direction: row-reverse;
-
-    // margin: -710px auto 0;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 93.75rem;
+        height: 93.75rem;
+        right: -70.75rem;
+        top: 50%;
+        margin-top: -46.875rem;
+        background: url(../../img/images/shape.svg) no-repeat center;
+        background-size: contain !important;
+        opacity: .9;
+        -webkit-animation: spin 7s linear infinite;
+        animation: spin 7s linear infinite;
+        border-radius: 30%;
+    }
 }
+@keyframes spin{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 .image, .contain-image, .default-image {
     object-fit: cover;
     display: block;
