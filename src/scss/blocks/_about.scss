@@ -24,7 +24,7 @@
 
 .rectangle-shape {
     width: calc(((100% - 1140px) / 2) + 786px);
-    height: 710px;
+    height: 100%;
     background-image: linear-gradient(90deg, #d53d29, transparent);
     margin: 0 auto 0 0;
     position: absolute !important;
@@ -119,4 +119,7 @@
     width: 175px;
     height: 62px;
     margin: 23px auto 0 0px;
+}
+.button.is-danger.is-dark{
+    color: white;
 }
