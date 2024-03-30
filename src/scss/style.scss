@@ -12,22 +12,10 @@
 @import "blocks/footer";
 
 @import "components/splide";
+@import "components/mobile-nav";
 
-
-$layout-width: 1920px;
-
-body{
-    font-size: get-vw-by-layout(18px);
-  
-    @media (min-width: 1200px) and (max-width: 1439px) {
-      font-size: get-vw-by-layout(20px, 1440);
-    }
-
-    @media (max-width: 450px) {
-        font-size: get-vw-by-layout(15px, 768);
-    }
-
-    @media (max-width: 320px) {
-        font-size: get-vw-by-layout(13px, 450);
-    }
+html{
+    scroll-behavior: smooth;
 }
+
+

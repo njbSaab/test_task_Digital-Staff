@@ -73,6 +73,14 @@
   .button.is-text:active {
     background-color: rgba(0, 0, 0, 0.175); 
   }
-  
-  
 }
+
+@media (max-width: 1200px) {
+  .header .navbar{
+    display: none;
+  }
+  .header .btn-wrapper{
+    margin-top: 10px;
+  }
+}
+

@@ -1,16 +1,12 @@
-.about {
+.home {
     position: relative;
     position: fixed;
     z-index: 1;
     height: 100dvh;
     width: 100%;
 }
-.about-inner {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-.cabout-item {
+
+.home-inner {
     position: relative;
     align-items: center;
     width: 100%;
@@ -22,7 +18,7 @@
 }
 
 
-.rectangle-shape {
+.gradient-shape {
     width: calc(((100% - 1140px) / 2) + 786px);
     height: 100%;
     background-image: linear-gradient(90deg, #d53d29, transparent);
@@ -59,7 +55,7 @@
     }
 }
 
-.image, .contain-image, .default-image {
+.image {
     object-fit: cover;
     display: block;
     vertical-align: middle;
@@ -67,25 +63,18 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
-.about-image {
+.home-image {
     width: auto;
     height: auto;
     margin: 44px 80px 0 auto;
 }
-.contain-image {
-    object-fit: contain;
-    background-size: contain;
-}
-.image, .default-image {
-    overflow: hidden;
-}
-.text-group {
+
+.home-text-group {
     display: flex;
     align-items: center;
     min-height: 538px;
     height: auto;
 }
-
 
 .container-layout {
     position: relative;
@@ -100,10 +89,8 @@
     font-size: 4.5rem;
     margin: 33px 0 0 0px;
 }
-.description {
+.container-layout .description {
     margin: 20px 120px 0 0px;
-}
-.large-text {
     font-weight: 400;
     line-height: 1.6;
     font-size: 1.25rem;
@@ -112,6 +99,7 @@
     color: white;
     opacity: .9;
 }
+
 .content h1{
     font-size: 4.5rem;
 }
@@ -122,4 +110,71 @@
 }
 .button.is-danger.is-dark{
     color: white;
+}
+
+@media (max-width: 1200px) {
+    .container-layout {
+        max-width: 100%;
+        margin-left: 20px;
+    }
+    .content h1 {
+        font-size: 3rem;
+    }
+    .home-text-group{
+        flex: 1;
+    }
+    .title{
+        text-wrap: balance;
+        width: 70%;
+    }
+    .content h1:not(:first-child) {
+        margin: .5em 0 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .home-text-group{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+    }
+    .home-image{
+        opacity: .7;
+    }
+    .title{
+        width: 100%;
+    }
+}
+@media (max-width: 450px){
+    .container-layout{
+        text-align: center;
+        img{
+            margin: auto;
+        }
+    }
+    .container-layout-image {
+        width: 150px;
+        height: 50px;
+    }
+    .container-layout .description{
+        margin: 0;
+    }
+    .home-image {
+        opacity: 0.5;
+        margin: 100px auto auto;
+    }
+    .content-sheet {
+        &::after{
+            content: none;
+            -webkit-animation: none;
+            animation: none;
+        }
+    }
+    .gradient-shape{
+        width: 50%;
+    }
 }
